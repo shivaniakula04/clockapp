@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styleclock.css"/>
+</head>
+<body>
+<h1 class="head1">Digital Clock</h1>
+<h2 class="head2">"The future is uncertain but the end is always near"</h2>
+<div id ="MyClockDisplay" class="clock"></div>
+<script type="text/javascript">
+function showTime()
+{
+	var date=new Date();
+	var h=date.getHours();
+	var m=date.getMinutes();
+	var s=date.getSeconds();
+	var time=h+":"+m+":"+s;
+	document.getElementById("MyClockDisplay").innerText=time;
+	document.getElementById("MyClockDisplay").textContent=time;
+	setTimeout(showTime,1000);
+}
+showTime();	
+</script>
+<p1>
+
+</body>
+</html>	
